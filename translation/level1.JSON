@@ -1,0 +1,31 @@
+[
+    {
+        "title": "I'm a student",
+        "answer": "انا طالب"
+    },
+    {
+        "title": "You are a student.",
+        "answer": "انت طالب"
+    },
+    {
+        "title": "We are students.",
+        "answer": "نحن طلاب"
+    },
+    {
+        "title": "He is a student.",
+        "answer": "هو طالب"
+    },
+    {
+        "title": "She is a student.",
+        "answer": "هي طالب"
+    },
+    {
+        "title": "It is a car.",
+        "answer": "انها سيارة"
+    },
+    {
+        "title": "They are friends.",
+        "answer": "انهم اصدقاء"
+    }
+
+]

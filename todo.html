@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/todo.css">
+    <link rel="stylesheet" href="CSS/all.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.png">
+    <title>Madrasa Online - قائمة المهام</title>
+</head>
+<body>
+    <!-- Start Header -->
+    <header id="head">
+        <div class="container">
+            <!-- Logo -->
+            <img src="images/logo.jpeg" id="logo">
+            <!-- Nav Bar -->
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#"></i>التواصل</a></li>
+                    <li><a href="#"></i>مواقع مفيدة</a></li>
+                    <li><a href="#"></i>قاموسي</a></li>
+                    <li><a href="#" class="todo-btn">قائمة المهام</a></li>
+                    <li><a href="index.html">الرئيسية</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Start ToDo & Pomodoro -->
+    <!-- <h3 class="todo-heading" id="todo_pomodoro"> قائمة المهام</h3> -->
+    <div class="todo_pomodoro">
+        <div class="todo">
+            <!-- Input section -->
+            <div class="addtask">
+                <input type="text" name="" id="input">
+                <button id="add-button">Add</button>
+            </div>
+        
+            <!--Tasks Container-->
+            <div class="container" id="container">
+                <h1>To <span>Do</span> List</h1>
+                <div class="date">Date: <span></span></div>
+                <div class="tasks tasks_container">
+                </div>
+            </div>
+        </div>
+
+        <div id="pomodoro">
+            <div class="type">
+                <button class="pomodoro active">Pomodoro</button>
+                <button class="break">Break</button>
+            </div>
+            <div class="timer">
+                <input type="text" name="" id="min" placeholder="00">
+                <span>:</span>
+                <input type="text" name="" id="sec" placeholder="00" readonly = "readonly">
+            </div>
+            <div class="pomodorobtns">
+                <button class="start">Start</button>
+                <button class="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <!-- End ToDo & Pomodoro-->
+
+
+    <script src="js/todo.js"></script>
+</body>
+</html>

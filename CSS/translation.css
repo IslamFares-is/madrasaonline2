@@ -1,0 +1,88 @@
+html {
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+    
+}
+a {
+    text-decoration: none !important;
+    color:inherit !important;
+}
+
+::-webkit-scrollbar {
+    width:12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E467F;
+}
+
+body{
+    background-color: #EEF1F7 !important;
+    font-family: 'Almarai', sans-serif !important;
+    overflow-x: hidden;
+}
+
+/* start heading and logo */
+nav {
+    position: relative;
+    z-index: 4;
+    box-shadow: 0 0 10px 0 rgba(205, 202, 202, 0.742);
+    padding:0 !important;
+}
+
+
+nav ul li{
+    transition:0.4s ease-in-out;
+    cursor:pointer;
+}
+nav li:focus, a:focus {
+    outline: none !important;
+}
+nav ul li:hover {
+    background-color:#1E467F;
+    border-radius:5px;
+    box-shadow: 0 3px 0 0 rgb(238, 206, 46);
+}
+nav ul li:hover a {
+    color:wheat !important;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    padding:0 1rem !important;
+}
+#logo{
+    min-width: 50px;
+    max-width: 80px;
+    width: 80px;
+
+}
+
+/*  */
+
+.question {
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(205, 202, 202, 0.742);
+    padding: 10px;
+    margin-top:1rem;
+}
+
+.question h5 {
+    padding:0 !important; 
+}
+
+.question button {
+    padding:5px !important;
+}
+.question .accordion-body {
+    font-size: 1.2rem;
+}

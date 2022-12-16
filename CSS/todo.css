@@ -1,0 +1,377 @@
+html {
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+::-webkit-scrollbar {
+    width:12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1E467F;
+}
+
+body{
+    background-color: #EEF1F7;
+    font-family: 'Almarai', sans-serif;
+    overflow-x: hidden;
+}
+
+/* start heading and logo */
+
+header .container{
+    margin: auto;
+    padding: auto;
+    width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header .navigation ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+
+}
+header .navigation ul li{
+    margin-right: 1rem;
+    padding:1rem;
+    transition:0.4s ease-in-out;
+    cursor:pointer;
+}
+li:focus, a:focus {
+    outline: none !important;
+}
+ul .active, ul li:hover {
+    background-color:#1E467F;
+    border-radius:5px;
+    box-shadow: 0 3px 0 0 rgb(238, 206, 46);
+}
+ul li:hover a {
+    color:wheat !important;
+}
+
+header .navigation ul li a{
+    color: black;
+    text-decoration: none;
+    padding:1rem !important;
+}
+#logo{
+    min-width: 50px;
+    max-width: 80px;
+    width: 80px;
+
+}
+header .navigation ul i{
+    margin-right: 8px;
+}
+/* end heading and logo */
+
+
+/* Start Styling Todo List */
+.todo-heading {
+    max-width:1024px;
+    margin:6rem auto 1rem;
+    text-align: center;
+    color:wheat;
+    padding:5px 0;
+    background-color:#1E467F;
+    border-radius:5px;
+    box-shadow: 0 3px 0 0 rgb(238, 206, 46);
+    width:100%;
+    font-size: 2rem;
+}
+.todo_pomodoro {
+    width:1024px;
+    margin:1rem auto;
+    padding:0 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url(../images/1150043.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+.todo_pomodoro::before {
+    content:"";
+    width:10px;
+    height:100%;
+    background-color:#EEF1F7;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    left:-10px;
+}
+.addtask {
+    margin:1rem 0;
+    padding:1rem !important;
+    display: flex;
+}
+
+.addtask input {
+    flex:1;
+    font-size: 1rem;
+    color:rgba(221, 13, 100, 0.909);
+    border:2px solid rgb(2, 160, 118);
+    padding:0 1rem;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.addtask input:focus {
+    outline-color:rgba(221, 13, 100, 0.909)
+}
+
+
+#add-button {
+    padding:10px 20px;
+    margin-left:5px;
+    cursor:pointer;
+    background-color: rgb(2, 160, 118);
+    color: white;
+    border:none;
+    font-size: 1rem;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+#add-button:hover {
+    background-color: rgba(221, 13, 100, 0.909);
+}
+.todo .container, .addtask {
+    background-color: white;
+    width:400px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding:2rem 0; 
+    overflow: hidden;
+}
+.tasks_container {
+    height:300px;
+    overflow-y: scroll;
+    padding:0 1rem
+}
+.tasks_container::-webkit-scrollbar {
+    width:10px;
+}
+.tasks_container::-webkit-scrollbar-thumb {
+    background:rgb(2, 160, 118)
+}
+
+
+.todo .container h1 {
+    color:rgb(2, 160, 118);
+    text-align: center;
+}
+.todo h1 span {
+    color:rgba(221, 13, 100, 0.909);
+}
+
+.date {
+    text-align: center;
+    color:rgb(2, 160, 118);
+    margin:1rem 0 2rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 0 1rem;
+}
+.task .bullet {
+    width:18px;
+    height:18px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border:2px solid rgb(2, 160, 118);
+    margin-right:8px;
+    cursor:pointer;
+}
+
+.task .write input {
+    border:none;
+    font-size: 1rem;
+    color:rgb(2, 160, 118);
+    width:100%;
+    background:transparent;
+    padding:5px 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition:0.4s ease;
+    -webkit-transition:0.4s ease;
+    -moz-transition:0.4s ease;
+    -ms-transition:0.4s ease;
+    -o-transition:0.4s ease;
+}
+.task .write input:focus {
+    outline: none;
+}
+.task .write .dots {
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    color:rgba(221, 13, 100, 0.909);
+    margin-top:-10px;
+    overflow-x: hidden !important;
+}
+
+.delete {
+    background-color: crimson;
+    padding:5px 0;
+    width:50px;
+    font-size:0.9rem;
+    color:white;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor:pointer;
+}
+
+.done .write input, div[completed = "true"] .write input {
+    text-decoration:line-through;
+    transition: 0.4s;
+    -webkit-transition: 0.4;
+    -moz-transition: 0.4;
+    -ms-transition: 0.4;
+    -o-transition: 0.4;
+    color:black;
+    
+}
+
+.move {
+    right:0;
+    position: fixed;
+}
+
+/* End Styling Todo List */
+
+/* Styling Pomodoro */
+#pomodoro {
+    width:400px;
+    padding:0 1rem 1rem;
+    background-color:rgba(237, 24, 56, 0.689);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#pomodoro > div {
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:1.2rem;
+}
+#pomodoro button {
+    background-color: #7f1e2ea3;
+    color:white;
+    width:120px;
+    border:none;
+    padding:5px 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor:pointer;
+    font-family: 'Comic Neue', cursive;
+
+}
+
+#pomodoro .active {
+    border:3px solid rgb(2, 160, 118);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+#pomodoro input {
+    background: transparent;
+    border:none;
+    font-size: 3.5rem;
+    width:120px;
+    color:white;
+    text-align: left;
+    font-family: 'Comic Neue', cursive;
+}
+
+#pomodoro input:first-of-type {
+    text-align: right;
+}
+
+#pomodoro input:focus {
+    outline:none
+}
+
+#pomodoro input::placeholder {
+    color:white;
+}
+
+
+.timer span {
+    color:white;
+    font-size: 4rem;
+    display: inline-block;
+    line-height: 40px;
+}

@@ -1,0 +1,275 @@
+html {
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+    
+}
+a {
+    text-decoration: none !important;
+    color:inherit !important;
+}
+
+::-webkit-scrollbar {
+    width:0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(60, 59, 59, 0);
+}
+
+body{
+    background-color: #EEF1F7 !important;
+    font-family: 'Almarai', sans-serif !important;
+    overflow-x: hidden;
+}
+
+/* start heading and logo */
+/* start heading and logo */
+nav {
+    position: relative;
+    z-index: 4;
+    box-shadow: 0 0 10px 0 rgba(205, 202, 202, 0.742);
+    padding:0 !important;
+}
+
+
+nav ul li{
+    transition:0.4s ease-in-out;
+    cursor:pointer;
+}
+li:focus, a:focus {
+    outline: none !important;
+}
+ul li:hover {
+    background-color:#1E467F;
+    border-radius:5px;
+    box-shadow: 0 3px 0 0 rgb(238, 206, 46);
+}
+nav ul li:hover a {
+    color:wheat !important;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    padding:0 1rem !important;
+}
+#logo{
+    min-width: 50px;
+    max-width: 80px;
+    width: 80px;
+
+}
+/* end heading and logo */
+
+
+/* -----------------------------------Start Styling Playlist---------------- */
+.playlist {
+    min-width:330px !important;
+    background-color: white;
+    width:fit-content;
+    box-shadow: 0 0 10px 0 rgba(205, 202, 202, 0.742);
+    overflow-x: hidden;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-bottom:10px;
+    font-family: 'Comic Neue', cursive;
+    height:580px;
+
+
+}
+.playlist .playlist-head {
+    display: flex;
+    justify-content: space-between;
+    color:rgb(99, 96, 96);
+    position: relative;
+    padding:1rem;
+    font-family: 'Almarai', sans-serif !important;
+}
+
+.playlist .playlist-head h3 {
+    font-size: 1.3rem;
+}
+
+.playlist .playlist-head span {
+    font-size: 1.2rem;
+}
+
+.playlist-head::after {
+    content:"";
+    width:120%;
+    height:1px;
+    background-color: rgba(131, 123, 123, 0.797);
+    position: absolute;
+    bottom:-5px;
+    right:-15px;
+    
+}
+
+
+.units-container {
+    margin-top:10px;
+    height:500px;
+    overflow-y: scroll;
+    color:rgba(74, 72, 72, 0.909)
+}
+
+.units-container > div {
+    width:100%;
+    height:60px;
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    overflow-y: hidden;
+    margin-top:1rem;
+    font-size: 1rem;
+}
+
+.units-container .title {
+    padding:0 1rem;
+    font-size: 1.2rem;
+    height:60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.units-container > div > a {
+    display: inline-block;
+    width:100%;
+    padding:10px 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition:0.5s ease-in-out;
+    -webkit-transition:0.5s ease-in-out;
+    -moz-transition:0.5s ease-in-out;
+    -ms-transition:0.5s ease-in-out;
+    -o-transition:0.5s ease-in-out;
+    text-align: right;
+    font-family: 'Almarai', sans-serif !important;
+}
+.units-container > div i {
+    margin-left:3px;
+}
+.units-container > div > a:hover {
+    background-color:#1E467F;
+    color:wheat !important;
+    padding-right:1.7rem;
+}
+
+/* Start Styling Video Player */
+
+.video-player {
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(205, 202, 202, 0.742);
+    margin-left:-7rem !important;
+    margin-bottom:1rem;
+    align-self: flex-start;
+    padding-bottom:2rem;
+}
+
+.video-player .options {
+    margin: 0 auto 2rem;
+    /* width:600px; */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.video-player .options button {
+    font-family: 'Almarai', sans-serif;
+    flex:1;
+    border:none;
+    background-color: #EEF1F7;
+    padding:5px 0;
+    font-size: 1.1rem;
+    /* color:antiquewhite; */
+    cursor:pointer !important;
+}
+
+.video-player .options .Quiz {
+    border-bottom-left-radius:5px
+}
+
+.video-player .options .vid {
+    border-bottom-right-radius: 5px;
+}
+.vidoe-player > div:not(:first-of-type) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-block: 2rem;
+}
+
+
+
+.video-player .options .active {
+    color:wheat;
+    background-color:#1E467F;
+}
+
+.video-player .sections >div:not(.active) {
+    display: none;
+}
+
+
+
+.video-player .sections {
+    display: flex;
+    justify-content: center;
+}
+.video-section {
+    width:100%;
+}
+/* End Styling Video Player */
+.videos-iframes, .games-iframes {
+    display: none;
+}
+
+/* files sections */
+
+.games-section {
+    width:100%;
+}
+.sections .dropdown {
+    margin:0 0 5px 5px;
+}
+.dropdown-menu li {
+    text-align: right;
+}
+
+
+.dropdown-menu a:hover {
+    background-color: #1E467F;
+    color: wheat !important;
+}
+
+/* Start Styling Quiz Section */
+.quiz-section, .files-section {
+    width:100%;
+}
+
+.accordion-body {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.accordion-body a {
+    padding:10px;
+    background-color: #EEF1F7;
+    margin-top: 5px;
+    font-weight: bold;
+}
